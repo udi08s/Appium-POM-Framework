@@ -5,25 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
 public class BasePage extends Page{
 
-	public BasePage(WebDriver driver) {
+	public BasePage(AndroidDriver<MobileElement> driver) {
 		super(driver);
 	}
 
-	@Override
-	public String getPageTitle() {
-		return driver.getTitle();
-	}
 
 	@Override
-	public String getPageHeader(By locator) {
-		return getElement(locator).getText();
-	}
-
-	@Override
-	public WebElement getElement(By locator) {
-		WebElement element=null;
+	public MobileElement getElement(By locator) {
+		MobileElement element=null;
 		try {
 			waitForElementPresent(locator);
 			element=driver.findElement(locator);
@@ -37,8 +31,8 @@ public class BasePage extends Page{
 		return element;
 	}
 	
-	public WebElement getElements(By locator) {
-		WebElement elements=null;
+	public MobileElement getElements(By locator) {
+		MobileElement elements=null;
 		try {
 			waitForElementsPresent(locator);
 			elements=driver.findElement(locator);
@@ -69,7 +63,6 @@ public class BasePage extends Page{
 	public void waitForElementPresent(By locator) {
 		try {
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-			
 		}
 		catch(Exception e) {
 			System.out.println("Exception occured in BasePage while waiting for element"+locator.toString());
@@ -78,20 +71,6 @@ public class BasePage extends Page{
 		
 	}
 	
-	
-
-	@Override
-	public void waitForPageTitle(String title) {
-		
-		try {
-			wait.until(ExpectedConditions.titleContains(title));
-		}
-		catch(Exception e) {
-			System.out.println("Exception occured in BasePage while waiting for title"+title);
-			e.printStackTrace();
-		}
-		
-	}
 	
 	
 

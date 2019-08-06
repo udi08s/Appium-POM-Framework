@@ -7,6 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import io.appium.java_client.MobileBy;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+
 /**
  * @author udayseshadri
  *
@@ -14,44 +18,40 @@ import org.openqa.selenium.WebElement;
 public class HomePage extends BasePage {
 	
 	//Page Locator
+	private By menuBtn=MobileBy.AccessibilityId("open navigation menu"); 
 	
-	private By bookAFlight=By.id("panel-book-a-trip");
-	
-	private By flightLink=By.id("panel-flights");
+	private By orderNowBtn=By.id("com.kfcaus.ordering:id/icon_button_container_ll");
 	
 	
-	public HomePage(WebDriver driver) {
+	public HomePage(AndroidDriver<MobileElement> driver) {
 		super(driver);
 	}
 
 	//getters
-
 	/**
-	 * @return the bookAFlight
+	 * @return the menuBtn
 	 */
-	public WebElement getBookAFlight() {
-		return getElement(bookAFlight);
+	public MobileElement getMenuBtn() {
+		return getElement(menuBtn);
 	}
 
-	/**
-	 * @return the flightLink
-	 */
-	public WebElement getFlightLink() {
-		return getElement(flightLink);
-	}
 
-	public String getHomePageTitle() {
-		return getPageTitle();
-	}	
+	/**
+	 * @return the orderNow
+	 */
+	public MobileElement getOrderNow() {
+		return getElement(orderNowBtn);
+	}
+	
 	
 	
 	/**
-	 * @return FlightBooking
+	 * @return MenuPage
 	 */
-	public FlightBooking clickFlightLink() {
-		getFlightLink().click();
+	public MenuPage clickMenu() {
+		getMenuBtn().click();
 		
-		return getInstance(FlightBooking.class);
+		return getInstance(MenuPage.class);
 		
 	}
 
