@@ -54,5 +54,14 @@ public class HomePage extends BasePage {
 		return getInstance(MenuPage.class);
 		
 	}
+	
+	public boolean isOrderNowBtnAvailable() {
+		
+		if(getMenuBtn().isDisplayed()) {
+			return true;
+		}
+		else
+			return false;
+	}
 
 }
