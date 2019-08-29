@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [Flight Booking Suite]">
+  <test thread-count="2" verbose="3" name="LoginTest1(failed)">
+    <parameter name="platformVersion" value="6.0"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="deviceName" value="Android Emulator"/>
+    <classes>
+      <class name="com.testingfoo.tests.LoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUpTest"/>
+          <include name="test"/>
+        </methods>
+      </class> <!-- com.testingfoo.tests.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest1(failed) -->
+</suite> <!-- Failed suite [Flight Booking Suite] -->

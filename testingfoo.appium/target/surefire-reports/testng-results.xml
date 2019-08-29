@@ -2,54 +2,110 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Flight Booking Suite" duration-ms="27131" started-at="2019-08-02T03:08:00Z" finished-at="2019-08-02T03:08:27Z">
+  <suite name="Parallel Test Suite" duration-ms="38997" started-at="2019-08-11T01:50:54Z" finished-at="2019-08-11T01:51:33Z">
     <groups>
     </groups>
-    <test name="FlightBooking" duration-ms="21669" started-at="2019-08-02T03:08:00Z" finished-at="2019-08-02T03:08:22Z">
-      <class name="com.testingfoo.tests.FlightBookingTest">
-        <test-method status="PASS" signature="setUpTest(java.lang.String)[pri:0, instance:com.testingfoo.tests.FlightBookingTest@338494fa]" name="setUpTest" is-config="true" duration-ms="15224" started-at="2019-08-02T03:08:00Z" finished-at="2019-08-02T03:08:15Z">
+    <test name="LoginTest" duration-ms="38894" started-at="2019-08-11T01:50:54Z" finished-at="2019-08-11T01:51:33Z">
+      <class name="com.testingfoo.tests.LoginTest">
+        <test-method status="PASS" signature="setUpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testingfoo.tests.LoginTest@e04ccf8]" name="setUpTest" is-config="true" duration-ms="20644" started-at="2019-08-11T01:50:54Z" finished-at="2019-08-11T01:51:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Android Phone]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[dfa3b957]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8201]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.testingfoo.tests.FlightBookingTest@338494fa]" name="test" duration-ms="5042" started-at="2019-08-02T03:08:16Z" finished-at="2019-08-02T03:08:21Z">
+        <test-method status="PASS" signature="loginTestWithValidCredentials()[pri:0, instance:com.testingfoo.tests.LoginTest@e04ccf8]" name="loginTestWithValidCredentials" duration-ms="17069" started-at="2019-08-11T01:51:15Z" finished-at="2019-08-11T01:51:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testingfoo.tests.FlightBookingTest@338494fa]" name="tearDown" is-config="true" duration-ms="234" started-at="2019-08-02T03:08:21Z" finished-at="2019-08-02T03:08:22Z">
+        </test-method> <!-- loginTestWithValidCredentials -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.testingfoo.tests.LoginTest@e04ccf8]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-08-11T01:51:32Z" finished-at="2019-08-11T01:51:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testingfoo.tests.LoginTest@e04ccf8]" name="tearDown" is-config="true" duration-ms="658" started-at="2019-08-11T01:51:32Z" finished-at="2019-08-11T01:51:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.testingfoo.tests.FlightBookingTest -->
-    </test> <!-- FlightBooking -->
-    <test name="FlightBooking2" duration-ms="27131" started-at="2019-08-02T03:08:00Z" finished-at="2019-08-02T03:08:27Z">
-      <class name="com.testingfoo.tests.FlightBookingTest">
-        <test-method status="PASS" signature="setUpTest(java.lang.String)[pri:0, instance:com.testingfoo.tests.FlightBookingTest@5b07730f]" name="setUpTest" is-config="true" duration-ms="21694" started-at="2019-08-02T03:08:00Z" finished-at="2019-08-02T03:08:22Z">
+      </class> <!-- com.testingfoo.tests.LoginTest -->
+    </test> <!-- LoginTest -->
+    <test name="LoginTest1" duration-ms="38997" started-at="2019-08-11T01:50:54Z" finished-at="2019-08-11T01:51:33Z">
+      <class name="com.testingfoo.tests.LoginTest">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.testingfoo.tests.LoginTest@5136207f]" name="suiteSetup" is-config="true" duration-ms="79" started-at="2019-08-11T01:50:54Z" finished-at="2019-08-11T01:50:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetup -->
+        <test-method status="PASS" signature="setUpTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.testingfoo.tests.LoginTest@5136207f]" name="setUpTest" is-config="true" duration-ms="20950" started-at="2019-08-11T01:50:54Z" finished-at="2019-08-11T01:51:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ff]]>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Android Emulator]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[6.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8200]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.testingfoo.tests.FlightBookingTest@5b07730f]" name="test" duration-ms="2074" started-at="2019-08-02T03:08:22Z" finished-at="2019-08-02T03:08:24Z">
+        <test-method status="PASS" signature="loginTestWithValidCredentials()[pri:0, instance:com.testingfoo.tests.LoginTest@5136207f]" name="loginTestWithValidCredentials" duration-ms="17079" started-at="2019-08-11T01:51:15Z" finished-at="2019-08-11T01:51:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testingfoo.tests.FlightBookingTest@5b07730f]" name="tearDown" is-config="true" duration-ms="3257" started-at="2019-08-02T03:08:24Z" finished-at="2019-08-02T03:08:27Z">
+        </test-method> <!-- loginTestWithValidCredentials -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.testingfoo.tests.LoginTest@5136207f]" name="afterMethod" is-config="true" duration-ms="2" started-at="2019-08-11T01:51:32Z" finished-at="2019-08-11T01:51:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.testingfoo.tests.LoginTest@5136207f]" name="tearDown" is-config="true" duration-ms="773" started-at="2019-08-11T01:51:32Z" finished-at="2019-08-11T01:51:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.testingfoo.tests.FlightBookingTest -->
-    </test> <!-- FlightBooking2 -->
-  </suite> <!-- Flight Booking Suite -->
+        <test-method status="PASS" signature="tearDownAll()[pri:0, instance:com.testingfoo.tests.LoginTest@5136207f]" name="tearDownAll" is-config="true" duration-ms="1" started-at="2019-08-11T01:51:33Z" finished-at="2019-08-11T01:51:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownAll -->
+      </class> <!-- com.testingfoo.tests.LoginTest -->
+    </test> <!-- LoginTest1 -->
+  </suite> <!-- Parallel Test Suite -->
 </testng-results>

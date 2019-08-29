@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 
 /**
  * @author udayseshadri
@@ -53,6 +54,7 @@ public class LoginPage extends BasePage {
 	/**
 	 * @return void
 	 */
+	@Step("Entering Username text..")
 	public void enterEmailID(String emailID) {
 		getEmailID().sendKeys(emailID);
 			
@@ -61,6 +63,7 @@ public class LoginPage extends BasePage {
 	/**
 	 * @return void
 	 */
+	@Step("Entering Password text..")
 	public void enterPassword(String password) {
 		getPassword().sendKeys(password);
 			
@@ -69,6 +72,7 @@ public class LoginPage extends BasePage {
 	/**
 	 * @return HomePage
 	 */
+	@Step("Clicking on Login Button..")
 	public HomePage clickLogin() {
 		
 		getLoginBtn().click();

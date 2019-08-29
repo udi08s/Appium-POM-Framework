@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 
 /**
  * @author udayseshadri
@@ -48,11 +49,22 @@ public class HomePage extends BasePage {
 	/**
 	 * @return MenuPage
 	 */
+	@Step("Clicking on Menu Button")
 	public MenuPage clickMenu() {
 		getMenuBtn().click();
 		
 		return getInstance(MenuPage.class);
 		
+	}
+	
+	@Step("Verifying whether OrderNow button exists in HomePage or not.")
+	public boolean isOrderNowBtnAvailable() {
+		
+		if(getMenuBtn().isDisplayed()) {
+			return true;
+		}
+		else
+			return false;
 	}
 
 }
