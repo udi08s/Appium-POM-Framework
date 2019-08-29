@@ -1,52 +1,47 @@
-/**
- * 
- */
 package com.testingfoo.tests;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import com.testingfoo.pages.HomePage;
-import com.testingfoo.pages.LoginPage;
 import com.testingfoo.pages.MenuPage;
 import com.testingfoo.pages.MyAccountPage;
 import com.testingfoo.pages.SignUpLoginPage;
-import com.testingfoo.utils.ExtentTestNGIReporterListener;
+import com.testingfoo.pages.SignUpPage;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
-/**
- * @author udayseshadri
- *
- */
-public class LoginTest extends BaseTest{
+public class SignUpTest extends BaseTest{
 
+	
 	private HomePage homePage;
 	private MenuPage menuPage;
 	private MyAccountPage myAccountPage;
 	private SignUpLoginPage signUpLoginPage;
-   
-
+	private SignUpPage signUpPage;
+	private String newEmailID;
+	
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("Testing the LogIn test")
-	public void loginTestWithValidCredentials() {
+	@Description("Testing the SignUp test")
+	public void signUpTestWithValidCredentials() {
 		
 		homePage=page.getInstance(HomePage.class);
 		menuPage=homePage.clickMenu();
 		signUpLoginPage=menuPage.clickSignUpLogin();
-		LoginPage loginPage=signUpLoginPage.clickLogin();
-		loginPage.enterEmailID("testuday@maildrop.cc");
-		loginPage.enterPassword("pass1234");
-		homePage=loginPage.clickLogin();
-		Assert.assertTrue(homePage.isOrderNowBtnAvailable(), "Login was not Successful");
+		signUpPage=signUpLoginPage.clickSignUpWithEmail();
+		signUpPage.enterFirstName("Test");
+		signUpPage.enterLastName("udayy");
+		newEmailID="testuday"+(int)Math.random()+"@maildrop.cc";
+		signUpPage.enterEmailID(newEmailID);
+		signUpPage.enterPhoneNumber("0422672022");
+		signUpPage.enterPassword("pass1234");
+		signUpPage.enterConfirmPassword("pass1234");
+		signUpPage.clickSignUpBtn();
+		Assert.assertTrue(homePage.isOrderNowBtnAvailable(), "SignUp was not Successful");
 	}
 	
 	@AfterMethod
