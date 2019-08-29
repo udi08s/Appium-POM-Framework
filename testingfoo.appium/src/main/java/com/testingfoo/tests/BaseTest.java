@@ -8,6 +8,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -35,6 +37,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Step;
 
 /**
  * @author udayseshadri
@@ -47,17 +50,19 @@ public class BaseTest {
 	public Page page;
 	private String hubUrl = "http://localhost:4444/wd/hub";
 	private static ExtentReports extent;
+	private static final Logger log = LogManager.getLogger();
 
 	
 	@BeforeSuite
 	public void suiteSetup() {
 		
-	
+		
 	}
 	
 	
 	@BeforeClass
 	@Parameters({"platformName","deviceName","platformVersion","udid","systemPort"})
+	@Step("Creating Appium Session for device: {2}")
 	public  void setUpTest(String platformName,String deviceName,String platformVersion,String udid,String systemPort) throws MalformedURLException {
 		
 		
@@ -76,10 +81,9 @@ public class BaseTest {
 	    
 	    
 	    driver=new AndroidDriver<MobileElement>(new URL(hubUrl), caps);
-	    
-	    //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	    
+	    	    
 		page = new BasePage(driver);
+		
 		
 	}
 	
