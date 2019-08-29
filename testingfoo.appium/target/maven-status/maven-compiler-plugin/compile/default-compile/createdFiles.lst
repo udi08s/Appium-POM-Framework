@@ -1,0 +1,10 @@
+com/testingfoo/pages/Page.class
+com/testingfoo/tests/BaseTest.class
+com/testingfoo/utils/ExtentManager.class
+com/testingfoo/pages/MenuPage.class
+com/testingfoo/pages/SignUpLoginPage.class
+com/testingfoo/pages/LoginPage.class
+com/testingfoo/pages/HomePage.class
+com/testingfoo/pages/BasePage.class
+com/testingfoo/tests/LoginTest.class
+com/testingfoo/utils/ExtentTestNGIReporterListener.class

@@ -7,7 +7,9 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUpTest"/>
+          <include name="suiteSetup"/>
           <include name="test"/>
+          <include name="tearDownAll"/>
         </methods>
       </class> <!-- com.testingfoo.tests.LoginTest -->
     </classes>
